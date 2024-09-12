@@ -30,7 +30,8 @@ echo -e ""
 
 #_____ Main Script execution  _______________________________________________________
 CONFIRM
-print_section_NC "Fetched Variables for $1 from: ... init.sh \& KEYCHAIN ..."
+nocol
+GREY_B "Fetched Variables for $1 from: ... init.sh \& KEYCHAIN ..."
         if [ $MOUNT=true ]; then
             echo "MOUNT:${MOUNT} is the value for USER:${ACCOUNT} and SERVER:${SERVER}"
             GREY_B "PASSWORD:${PASS2}"

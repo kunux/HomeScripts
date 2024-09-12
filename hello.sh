@@ -5,10 +5,6 @@ nocol () {              echo -e "${NC} $@ ";}                   # NOCOLOR
 REVERSE_B () {          echo -e "\033[1;7m $@ \c"; nocol;}      # REVERSED BOLD POUR DEV/DEBUG
 GREY_B () {             echo -e "\e[1;90m $@ \c"; nocol;}       # BOLD GREY POUR DEV/DEBUG
 
-#_____ Section 1 _______________________________________________________
-REVERSE_B "________Strating GIT Installation Script_______"
-echo -e ""
-
 #_____ functions  _______________________________________________________
 CONFIRM() 
 {
@@ -25,6 +21,10 @@ CONFIRM()
                         CONFIRM ;;
                 esac
 }
+
+#_____ Section 1 _______________________________________________________
+REVERSE_B "________Strating GIT Installation Script_______"
+echo -e ""
 
 #_____ Main Script execution  _______________________________________________________
 CONFIRM

@@ -14,9 +14,10 @@ CONFIRM()
                 [Yy])
                         echo "we are in yes we can continue with new value"
                         export
+                        echo "is it expoirted?"
                         ;; # you can change what you do here for instance
                 [Nn])
-                        echo 'exiting'
+                        echo "exiting"
                         exit 0;;
                 *)
                         CONFIRM ;;

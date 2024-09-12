@@ -13,8 +13,10 @@ CONFIRM()
                 case $REPLY in
                 [Yy])
                         echo "we are in yes we can continue with new value"
+                        nocol
                         export | grep PATH
                         echo "is it expoirted?"
+                        export $REPLY
                         ;; # you can change what you do here for instance
                 [Nn])
                         echo "exiting"
@@ -39,3 +41,4 @@ GREY_B "Fetched Variables for $1 from: ... init.sh \& KEYCHAIN ..."
             else
                error "mount is false ==  $MOUNT"
         fi
+

@@ -1,14 +1,16 @@
 #!/bin/bash
 
-echo "________Strating trhe script_______"
-echo "Hello, test from git project !"
-#read -pr "What is your name?" NAM
-#	echo "Hello, ${NAM}!"
-#	echo "executed from githidddddddub project......"
+#_____ Functions COLORS _______________________________________________________
+REVERSE_B () {          echo -e "\033[1;7m $@ \c"; nocol;}      # REVERSED BOLD POUR DEV/DEBUG
 
 
- confirm() {
-    echo -n "Continue? y or n? "
+#_____ Section 1 _______________________________________________________
+REVERSE_B "________Strating GIT Installation Script_______"
+echo -e ""
+
+#_____ functions  _______________________________________________________
+CONFIRM() {
+    echo -n "Do you want to ontinue? y or n? "
     read REPLY
     case $REPLY in
     [Yy]) echo 'yup y' ;; # you can change what you do here for instance
@@ -26,4 +28,6 @@ echo "Hello, test from git project !"
     esac
     # REPLY=''
 }
+
+#_____ Main Script execution  _______________________________________________________
 confirm

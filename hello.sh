@@ -13,7 +13,7 @@ CONFIRM()
                 case $REPLY in
                 [Yy])
                         echo "we are in yes we can continue with new value"
-                        export
+                        export | grep PATH
                         echo "is it expoirted?"
                         ;; # you can change what you do here for instance
                 [Nn])

@@ -1,26 +1,30 @@
 #!/bin/bash
 
 #_____ Functions COLORS _______________________________________________________
+nocol () {              echo -e "${NC} $@ ";}                   # NOCOLOR
 REVERSE_B () {          echo -e "\033[1;7m $@ \c"; nocol;}      # REVERSED BOLD POUR DEV/DEBUG
-
+GREY_B () {             echo -e "\e[1;90m $@ \c"; nocol;}       # BOLD GREY POUR DEV/DEBUG
 
 #_____ Section 1 _______________________________________________________
 REVERSE_B "________Strating GIT Installation Script_______"
 echo -e ""
 
 #_____ functions  _______________________________________________________
-CONFIRM() {
-        echo -n "Do you want to ontinue? y or n? "
+CONFIRM() 
+{
+        echo -n "Do you want to ontinue? [y]es or [n]o ?"
         read REPLY
-        case $REPLY in
-        [Yy]) echo 'yup y' ;; # you can change what you do here for instance
-        [Nn]) echo 'nope n' ;;
-        # Here are a few optional options to choose between
-        # 1. Repeat the question
-        *) CONFIRM ;;
-        esac
-        # REPLY=''
-    }
+                case $REPLY in
+                [Yy])
+                        echo "we are in yes we can continue with new value"
+                        ;; # you can change what you do here for instance
+                [Nn])
+                        echo 'exiting'
+                        exit 0;;
+                *)
+                        CONFIRM ;;
+                esac
+}
 
 #_____ Main Script execution  _______________________________________________________
 CONFIRM

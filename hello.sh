@@ -14,8 +14,6 @@ read -pr "What is your name?" NAM
     [Yy]) echo 'yup y' ;; # you can change what you do here for instance
     [Nn]) echo 'nope n' ;;
     # Here are a few optional options to choose between
-    # Any other answer:
-
     # 1. Repeat the question
     *) confirm ;;
 
@@ -28,3 +26,4 @@ read -pr "What is your name?" NAM
     esac
     # REPLY=''
 }
+confirm
